@@ -130,6 +130,27 @@ Unwraps a `gift`. The `gift` parameter should be the ID of a received wrapped gi
 
 Generically use an item. The `item` parameter should be an item ID.
 
+### tradeUP(items)
+
+Available only for items that have a designated Grade [(Official TF2 Wiki)](https://wiki.teamfortress.com/wiki/Trade-Up).
+The `items` parameter should be an array of item IDs.
+
+### removeItemAttribute (item, attribute)
+
+Remove item's specified attribute. 
+The `item` parameter should be an item ID. 
+The `attribute` parameter should be a value from [Attributes](https://github.com/TF2Autobot/node-tf2/blob/8cc488589f58e800485c7a174d9e589f575c6c66/enums.js#L87-L94).
+
+### applyStrangePart (item, part)
+
+Apply Strange Part to an item. 
+The `item` parameter should be an item ID, while the `part` parameter should be the Strange Part's item ID.
+
+### applyStrangifier (item, strangifier)
+
+Apply Strangifier to an item.
+The `item` parameter should be an item ID, while the `strangifier` parameter should be the Strangifier's item ID.
+
 ### sortBackpack(sortType)
 
 Sorts your backpack. `sortType` is the ID of the type of sort you want. I don't know which sort type is which code, so you'll have to figure that out for yourself.
