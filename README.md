@@ -130,6 +130,22 @@ Unwraps a `gift`. The `gift` parameter should be the ID of a received wrapped gi
 
 Generically use an item. The `item` parameter should be an item ID.
 
+### tradeUP(items)
+
+Available only for items that have a designated Grade [(Official TF2 Wiki)](https://wiki.teamfortress.com/wiki/Trade-Up). The `items` parameter should be an array of item ID.
+
+### removeItemAttribute (item, attribute)
+
+Remove item attributes. The `item` parameter should be an item ID. Available attributes ID to remove: `Custom item name` (1030), `Paint` (1031), `CustomTexture` (1051), `MakersMake` (1053), `UniqueCraftIndex` (1055), `Strange Part` (1073), `UpgradeCard` (1078),  `Killstreak` (1094), `GiftedBy` (2570), and `Festivizer` (2572).
+
+### applyStrangePart (item, part)
+
+Apply Strange Part into an item. The `item` parameter should be an item ID, while the `part` parameter should be the Strange Part item ID.
+
+### applyStrangifier (item, strangifier)
+
+Apply Strangifier into an item. The `item` parameter should be an item ID, while the `strangifier` parameter should be the Strangifier item ID.
+
 ### sortBackpack(sortType)
 
 Sorts your backpack. `sortType` is the ID of the type of sort you want. I don't know which sort type is which code, so you'll have to figure that out for yourself.
