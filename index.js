@@ -263,9 +263,9 @@ TeamFortress2.prototype.applyStrangePart = function (item, part) {
     });
 };
 
-TeamFortress2.prototype.applyStrangifier = function (item, strangifier) {
+TeamFortress2.prototype.applyStrangifierOrUnusualifier = function (item, strangifierOrUnusualifierID) {
     this._send(Language.ApplyXifier, Schema.CMsgGCCollectItem, {
-        "collection_item_id": strangifier,
+        "collection_item_id": strangifierOrUnusualifierID,
         "subject_item_id": item
     });
 };
