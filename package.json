@@ -1,7 +1,7 @@
 {
-	"name": "tf2",
-	"version": "3.0.2",
-	"description": "Exposes a simple API for interacting with the Team Fortress 2 game coordinator",
+	"name": "@tf2autobot/tf2",
+	"version": "1.0.0",
+	"description": "Exposes a simple API for interacting with the Team Fortress 2 game coordinator - forked",
 	"keywords": [
 		"tf2",
 		"tf",
