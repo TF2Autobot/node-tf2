@@ -132,19 +132,24 @@ Generically use an item. The `item` parameter should be an item ID.
 
 ### tradeUP(items)
 
-Available only for items that have a designated Grade [(Official TF2 Wiki)](https://wiki.teamfortress.com/wiki/Trade-Up). The `items` parameter should be an array of item ID.
+Available only for items that have a designated Grade [(Official TF2 Wiki)](https://wiki.teamfortress.com/wiki/Trade-Up).
+The `items` parameter should be an array of item IDs.
 
 ### removeItemAttribute (item, attribute)
 
-Remove item attributes. The `item` parameter should be an item ID. Available attributes ID to remove: `Custom item name` (1030), `Paint` (1031), `CustomTexture` (1051), `MakersMake` (1053), `UniqueCraftIndex` (1055), `Strange Part` (1073), `UpgradeCard` (1078),  `Killstreak` (1094), `GiftedBy` (2570), and `Festivizer` (2572).
+Remove item's specified attribute. 
+The `item` parameter should be an item ID. 
+The `attribute` parameter should be a value from [Attributes](https://github.com/TF2Autobot/node-tf2/blob/8cc488589f58e800485c7a174d9e589f575c6c66/enums.js#L87-L94).
 
 ### applyStrangePart (item, part)
 
-Apply Strange Part into an item. The `item` parameter should be an item ID, while the `part` parameter should be the Strange Part item ID.
+Apply Strange Part to an item. 
+The `item` parameter should be an item ID, while the `part` parameter should be the Strange Part's item ID.
 
 ### applyStrangifier (item, strangifier)
 
-Apply Strangifier into an item. The `item` parameter should be an item ID, while the `strangifier` parameter should be the Strangifier item ID.
+Apply Strangifier to an item.
+The `item` parameter should be an item ID, while the `strangifier` parameter should be the Strangifier's item ID.
 
 ### sortBackpack(sortType)
 
