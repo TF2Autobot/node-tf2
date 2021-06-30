@@ -146,10 +146,10 @@ The `attribute` parameter should be a value from [Attributes](https://github.com
 Apply Strange Part to an item. 
 The `item` parameter should be an item ID, while the `part` parameter should be the Strange Part's item ID.
 
-### applyStrangifier (item, strangifier)
+### applyStrangifierOrUnusualifier (item, strangifierOrUnusualifierID)
 
-Apply Strangifier to an item.
-The `item` parameter should be an item ID, while the `strangifier` parameter should be the Strangifier's item ID.
+Apply Strangifier to an item or Unusualifier to a specific taunt.
+The `item` parameter should be an item ID, while the `strangifierOrUnusualifierID` parameter should be the Strangifier/Unusualifier's item ID.
 
 ### sortBackpack(sortType)
 
