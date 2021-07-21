@@ -27,7 +27,7 @@ declare class TF2 extends EventEmitter {
 }
 
 declare namespace TF2 {
-    export enum RemoveItemAttribute {
+    export enum Attributes {
         Paint = 1031,
         CustomTexture = 1051,
         MakersMark = 1053,
