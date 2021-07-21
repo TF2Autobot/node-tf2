@@ -18,7 +18,7 @@ declare class TF2 extends EventEmitter {
 
     sortBackpack(sortType: number): void;
 
-    removeItemAttribute(item: string, attribute: TF2.RemoveItemAttribute): void;
+    removeItemAttribute(item: string, attribute: TF2.Attributes): void;
 
     // Maybe just add
     applyStrangePart(item: string, strangPartItemID: string): void;
