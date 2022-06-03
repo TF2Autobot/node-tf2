@@ -50,19 +50,21 @@ handlers[Language.UpdateItemSchema] = function(body) {
 	this.emit('itemSchema', proto.item_schema_version.toString(16).toUpperCase(), proto.items_game_url);
 
 	Axios({
-		method: 'GET',
-		url: proto.items_game_url
-	}).then(response => {
-		const body = response.data;
-		this.itemSchema = VDF.parse(body).items_game;
-		this.emit('itemSchemaLoaded');
-	}).catch(err => {
-		if (err) {
-			this.emit('debug', "Unable to download items_game.txt: " + err);
-			this.emit('itemSchemaError', err);
-			return;
-		}
-	})
+        method: 'GET',
+        url: proto.items_game_url,
+    })
+        .then((response) => {
+            const body = response.data;
+            this.itemSchema = VDF.parse(body).items_game;
+            this.emit('itemSchemaLoaded');
+        })
+        .catch((err) => {
+            if (err) {
+                this.emit('debug', 'Unable to download items_game.txt: ' + err);
+                this.emit('itemSchemaError', err);
+                return;
+            }
+        });
 };
 
 // Various notifications (why do we need three distinct interfaces??)
