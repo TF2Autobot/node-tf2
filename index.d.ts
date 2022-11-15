@@ -10,6 +10,8 @@ declare class TF2 extends EventEmitter {
 
     backpackSlots: number | undefined;
 
+    setLang(language: string): void;
+
     craft(items: string[], recipe?: number): void;
 
     deleteItem(item: string): void;
@@ -24,6 +26,12 @@ declare class TF2 extends EventEmitter {
     applyStrangePart(item: string, strangPartItemID: string): void;
 
     applyStrangifierOrUnusualifier(item: string, strangifierOrUnusualifierID: string): void;
+
+    on(event: 'systemMessage', handler: (message: string) => void): this;
+
+    on(event: 'displayNotification', handler: (title: string, body: string) => void): this;
+
+    on(event: 'itemBroadcast', handler: (message: string, username: string, wasDestruction: boolean, defindex: number) => void): this;
 }
 
 declare namespace TF2 {
