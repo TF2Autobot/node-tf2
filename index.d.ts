@@ -10,7 +10,7 @@ declare class TF2 extends EventEmitter {
 
     backpackSlots: number | undefined;
 
-    setLang(language: string): void;
+    setLang(localizationFile: string): void;
 
     craft(items: string[], recipe?: number): void;
 
