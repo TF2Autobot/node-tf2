@@ -1,5 +1,5 @@
 const ByteBuffer = require('bytebuffer');
-const Axios = require('axios').default;
+const Request = require('request');
 const SteamID = require('steamid');
 const VDF = require('vdf');
 
@@ -49,22 +49,19 @@ handlers[Language.UpdateItemSchema] = function(body) {
 	let proto = decodeProto(Schema.CMsgUpdateItemSchema, body);
 	this.emit('itemSchema', proto.item_schema_version.toString(16).toUpperCase(), proto.items_game_url);
 
-	Axios({
-        method: 'GET',
-        url: proto.items_game_url,
-    })
-        .then((response) => {
-            const body = response.data;
-            this.itemSchema = VDF.parse(body).items_game;
-            this.emit('itemSchemaLoaded');
-        })
-        .catch((err) => {
-            if (err) {
-                this.emit('debug', 'Unable to download items_game.txt: ' + err);
-                this.emit('itemSchemaError', err);
-                return;
-            }
-        });
+	Request.get({
+		"uri": proto.items_game_url,
+		"gzip": true
+	}, (err, response, body) => {
+		if (err) {
+			this.emit('debug', "Unable to download items_game.txt: " + err);
+			this.emit('itemSchemaError', err);
+			return;
+		}
+
+		this.itemSchema = VDF.parse(body).items_game;
+		this.emit('itemSchemaLoaded');
+	});
 };
 
 // Various notifications (why do we need three distinct interfaces??)
