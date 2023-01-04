@@ -19,7 +19,7 @@
     /**
      * EGCSystemMsg enum.
      * @exports EGCSystemMsg
-     * @enum {string}
+     * @enum {number}
      * @property {number} k_EGCMsgInvalid=0 k_EGCMsgInvalid value
      * @property {number} k_EGCMsgMulti=1 k_EGCMsgMulti value
      * @property {number} k_EGCMsgGenericReply=10 k_EGCMsgGenericReply value
@@ -229,7 +229,7 @@
     /**
      * ESOMsg enum.
      * @exports ESOMsg
-     * @enum {string}
+     * @enum {number}
      * @property {number} k_ESOMsg_Create=21 k_ESOMsg_Create value
      * @property {number} k_ESOMsg_Update=22 k_ESOMsg_Update value
      * @property {number} k_ESOMsg_Destroy=23 k_ESOMsg_Destroy value
@@ -257,7 +257,7 @@
     /**
      * EGCBaseClientMsg enum.
      * @exports EGCBaseClientMsg
-     * @enum {string}
+     * @enum {number}
      * @property {number} k_EMsgGCPingRequest=3001 k_EMsgGCPingRequest value
      * @property {number} k_EMsgGCPingResponse=3002 k_EMsgGCPingResponse value
      * @property {number} k_EMsgGCClientWelcome=4004 k_EMsgGCClientWelcome value
@@ -283,7 +283,7 @@
     /**
      * EGCToGCMsg enum.
      * @exports EGCToGCMsg
-     * @enum {string}
+     * @enum {number}
      * @property {number} k_EGCToGCMsgMasterAck=150 k_EGCToGCMsgMasterAck value
      * @property {number} k_EGCToGCMsgMasterAckResponse=151 k_EGCToGCMsgMasterAckResponse value
      * @property {number} k_EGCToGCMsgRouted=152 k_EGCToGCMsgRouted value
@@ -384,11 +384,11 @@
         CCommunity_GamePersonalDataCategoryInfo.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.type != null && message.hasOwnProperty("type"))
+            if (message.type != null && Object.hasOwnProperty.call(message, "type"))
                 writer.uint32(/* id 1, wireType 2 =*/10).string(message.type);
-            if (message.localization_token != null && message.hasOwnProperty("localization_token"))
+            if (message.localization_token != null && Object.hasOwnProperty.call(message, "localization_token"))
                 writer.uint32(/* id 2, wireType 2 =*/18).string(message.localization_token);
-            if (message.template_file != null && message.hasOwnProperty("template_file"))
+            if (message.template_file != null && Object.hasOwnProperty.call(message, "template_file"))
                 writer.uint32(/* id 3, wireType 2 =*/26).string(message.template_file);
             return writer;
         };
@@ -598,7 +598,7 @@
         CCommunity_GetGamePersonalDataCategories_Request.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.appid != null && message.hasOwnProperty("appid"))
+            if (message.appid != null && Object.hasOwnProperty.call(message, "appid"))
                 writer.uint32(/* id 1, wireType 0 =*/8).uint32(message.appid);
             return writer;
         };
@@ -798,7 +798,7 @@
             if (message.categories != null && message.categories.length)
                 for (var i = 0; i < message.categories.length; ++i)
                     $root.CCommunity_GamePersonalDataCategoryInfo.encode(message.categories[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
-            if (message.app_assets_basename != null && message.hasOwnProperty("app_assets_basename"))
+            if (message.app_assets_basename != null && Object.hasOwnProperty.call(message, "app_assets_basename"))
                 writer.uint32(/* id 2, wireType 2 =*/18).string(message.app_assets_basename);
             return writer;
         };
@@ -1043,13 +1043,13 @@
         CCommunity_GetGamePersonalDataEntries_Request.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.appid != null && message.hasOwnProperty("appid"))
+            if (message.appid != null && Object.hasOwnProperty.call(message, "appid"))
                 writer.uint32(/* id 1, wireType 0 =*/8).uint32(message.appid);
-            if (message.steamid != null && message.hasOwnProperty("steamid"))
+            if (message.steamid != null && Object.hasOwnProperty.call(message, "steamid"))
                 writer.uint32(/* id 2, wireType 0 =*/16).uint64(message.steamid);
-            if (message.type != null && message.hasOwnProperty("type"))
+            if (message.type != null && Object.hasOwnProperty.call(message, "type"))
                 writer.uint32(/* id 3, wireType 2 =*/26).string(message.type);
-            if (message.continue_token != null && message.hasOwnProperty("continue_token"))
+            if (message.continue_token != null && Object.hasOwnProperty.call(message, "continue_token"))
                 writer.uint32(/* id 4, wireType 2 =*/34).string(message.continue_token);
             return writer;
         };
@@ -1303,12 +1303,12 @@
         CCommunity_GetGamePersonalDataEntries_Response.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.gceresult != null && message.hasOwnProperty("gceresult"))
+            if (message.gceresult != null && Object.hasOwnProperty.call(message, "gceresult"))
                 writer.uint32(/* id 1, wireType 0 =*/8).uint32(message.gceresult);
             if (message.entries != null && message.entries.length)
                 for (var i = 0; i < message.entries.length; ++i)
                     writer.uint32(/* id 2, wireType 2 =*/18).string(message.entries[i]);
-            if (message.continue_token != null && message.hasOwnProperty("continue_token"))
+            if (message.continue_token != null && Object.hasOwnProperty.call(message, "continue_token"))
                 writer.uint32(/* id 3, wireType 2 =*/26).string(message.continue_token);
             return writer;
         };
@@ -1542,9 +1542,9 @@
         CCommunity_TerminateGamePersonalDataEntries_Request.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.appid != null && message.hasOwnProperty("appid"))
+            if (message.appid != null && Object.hasOwnProperty.call(message, "appid"))
                 writer.uint32(/* id 1, wireType 0 =*/8).uint32(message.appid);
-            if (message.steamid != null && message.hasOwnProperty("steamid"))
+            if (message.steamid != null && Object.hasOwnProperty.call(message, "steamid"))
                 writer.uint32(/* id 2, wireType 0 =*/16).uint64(message.steamid);
             return writer;
         };
@@ -1757,7 +1757,7 @@
         CCommunity_TerminateGamePersonalDataEntries_Response.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.gceresult != null && message.hasOwnProperty("gceresult"))
+            if (message.gceresult != null && Object.hasOwnProperty.call(message, "gceresult"))
                 writer.uint32(/* id 1, wireType 0 =*/8).uint32(message.gceresult);
             return writer;
         };
