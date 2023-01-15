@@ -22,12 +22,12 @@
 		"bytebuffer": "^5.0.1",
 		"protobufjs": "^6.11.3",
 		"request": "^2.88.2",
+		"tf2-backpack": "^1.1.5",
 		"vdf": "^0.0.2"
 	},
 	"devDependencies": {
 		"steam-user": "^4.20.0",
-		"steamid": "^2.0.0",
-		"tf2-backpack": "^1.1.5"
+		"steamid": "^2.0.0"
 	},
 	"scripts": {
 		"generate-protos": "node scripts/generate-protos.js"
