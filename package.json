@@ -22,7 +22,7 @@
 		"axios": "^1.4.0",
 		"bytebuffer": "^5.0.1",
 		"protobufjs": "^7.2.4",
-		"tf2-backpack": "^1.1.7",
+		"tf2-backpack": "^1.1.8",
 		"vdf": "^0.0.2"
 	},
 	"devDependencies": {
