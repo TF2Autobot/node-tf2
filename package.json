@@ -33,6 +33,6 @@
 		"generate-protos": "node scripts/generate-protos.js"
 	},
 	"engines": {
-		"node": ">=8.0.0"
+		"node": ">=12.0.0"
 	}
 }
