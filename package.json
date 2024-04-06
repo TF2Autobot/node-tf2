@@ -26,7 +26,7 @@
 		"vdf": "^0.0.2"
 	},
 	"devDependencies": {
-		"steam-user": "^5.0.1",
+		"steam-user": "^5.0.8",
 		"steamid": "^2.0.0"
 	},
 	"scripts": {
