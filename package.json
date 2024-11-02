@@ -27,7 +27,7 @@
 	},
 	"devDependencies": {
 		"steam-user": "^5.2.0",
-		"steamid": "^2.0.0"
+		"steamid": "^2.1.0"
 	},
 	"scripts": {
 		"generate-protos": "node scripts/generate-protos.js"
