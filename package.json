@@ -21,7 +21,7 @@
 	"dependencies": {
 		"axios": "^1.7.7",
 		"bytebuffer": "^5.0.1",
-		"protobufjs": "^6.11.4",
+		"protobufjs": "^7.4.0",
 		"tf2-backpack": "^1.2.0",
 		"vdf": "^0.0.2"
 	},
